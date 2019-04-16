@@ -56,6 +56,11 @@
       <version>${org.springframework.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${org.mybatis.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.aspectj</groupId>
@@ -67,11 +72,6 @@
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>${org.mybatis.spring.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>${org.mybatis.version}</version>
     </dependency>
 
     <dependency>
@@ -110,7 +110,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.15</version>
+      <version>5.1.47</version>
     </dependency>
 
     <dependency>
