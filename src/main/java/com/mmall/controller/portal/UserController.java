@@ -34,18 +34,18 @@ public class UserController {
         }
         return response;
     }
-    @RequestMapping(value = "logout.do",method = RequestMethod.GET)
+    @RequestMapping(value = "logout.do",method = RequestMethod.POST)
     @ResponseBody
     public  ServerResponse<String> logout(HttpSession session){
         session.removeAttribute(Const.CURRENT_USER);
         return ServerResponse.createBySuccess();
     }
-    @RequestMapping(value = "register.do",method = RequestMethod.GET)
+    @RequestMapping(value = "register.do",method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse<String> register(User user){
         return iUserService.register(user);
     }
-    @RequestMapping(value = "check_vaild.do",method = RequestMethod.GET)
+    @RequestMapping(value = "check_vaild.do",method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse<String> checkValid(String str,String type){
         return iUserService.checkValid(str,type);
@@ -78,7 +78,6 @@ public class UserController {
     public ServerResponse<String> forgetRestPassword(String username,String passwordNew,String forgetToken){
         return iUserService.forgetResetPassword(username,passwordNew,forgetToken);
     }
-
 
 
     @RequestMapping(value = "reset_password.do",method = RequestMethod.POST)
