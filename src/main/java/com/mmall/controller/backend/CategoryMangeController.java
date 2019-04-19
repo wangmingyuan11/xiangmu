@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/mange/category")
+@RequestMapping("/manage/category")
 public class CategoryMangeController {
     @Autowired
     private IUserService iUserService;
