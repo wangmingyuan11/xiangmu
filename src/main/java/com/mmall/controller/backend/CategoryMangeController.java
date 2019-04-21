@@ -78,7 +78,7 @@ public class CategoryMangeController {
         }
         if(iUserService.checkAdminRole(user).isSuccess()){
             //查询当前和递归子节点的category信息
-            return iCatgoryService.getCategoryAndDeepChildrenCategory(categoryId);
+            return iCatgoryService.selectCategoryAndChildrenById(categoryId);
         }else{
             return ServerResponse.createByErrorMessage("无权限操作，需要管理员权限");
         }

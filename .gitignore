@@ -6,9 +6,6 @@
 *.orig
 #maven ignore
 target/
-#idea
-.idea/
-/idea/
 *.ipr
 *.iml
 *.iws
