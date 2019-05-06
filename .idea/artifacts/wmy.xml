@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wmy">
+    <output-path>$PROJECT_DIR$/out/artifacts/wmy</output-path>
+    <root id="archive" name="wmy.war">
+      <element id="dir-copy" path="D:/" />
+    </root>
+  </artifact>
+</component>
