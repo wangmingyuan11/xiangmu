@@ -228,8 +228,8 @@ where order_no=#{orderNo}
     select
     <include refid="Base_Column_List"/>
     from mmall_order
-    where  status=#{status}
-    <![CDATA[and create_time<=#{date}]]>
+    where status=#{status}
+    <![CDATA[and create_time <= #{date}]]>
     order by create_time desc
   </select>
   <update id="closeOrderByOrderId" parameterType="int">

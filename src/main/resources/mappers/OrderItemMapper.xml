@@ -184,7 +184,7 @@
   <select id="getByOrderNo" parameterType="map" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>
-    from mmall_order_item
+    from  mmall_order_item
     where order_no=#{orderNo}
   </select>
 </mapper>
