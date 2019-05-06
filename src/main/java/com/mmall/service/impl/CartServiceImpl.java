@@ -21,6 +21,9 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * Created by geely
+ */
 @Service("iCartService")
 public class CartServiceImpl implements ICartService {
 
@@ -33,6 +36,8 @@ public class CartServiceImpl implements ICartService {
         if(productId == null || count == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getDesc());
         }
+
+
         Cart cart = cartMapper.selectCartByUserIdProductId(userId,productId);
         if(cart == null){
             //这个产品不在这个购物车里,需要新增一个这个产品的记录
@@ -94,6 +99,19 @@ public class CartServiceImpl implements ICartService {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     private CartVo getCartVoLimit(Integer userId){
         CartVo cartVo = new CartVo();
         List<Cart> cartList = cartMapper.selectCartByUserId(userId);
@@ -148,6 +166,7 @@ public class CartServiceImpl implements ICartService {
         cartVo.setCartProductVoList(cartProductVoList);
         cartVo.setAllChecked(this.getAllCheckedStatus(userId));
         cartVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix"));
+
         return cartVo;
     }
 

@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * Created by geely
+ */
 @Service("iShippingService")
 public class ShippingServiceImpl implements IShippingService {
 
@@ -55,7 +57,7 @@ public class ShippingServiceImpl implements IShippingService {
         if(shipping == null){
             return ServerResponse.createByErrorMessage("无法查询到该地址");
         }
-        return ServerResponse.createBySuccess("查询地址成功",shipping);
+        return ServerResponse.createBySuccess("更新地址成功",shipping);
     }
 
 
